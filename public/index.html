@@ -28,16 +28,157 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div>
+      <h1>The Title</h1>
+      <p>This is a temporary paragraph to test if this works</p>
+      <p>This is a temporary paragraph to test if this works</p>
+    </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <button id="clicker">
+      Click me
+    </button>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <script>
+      window.__PICKER_CONFIG__ = {
+        question: 'I am:',
+        options: [
+          {
+            text: 'a neah company',
+            result: {
+              question: 'and want:',
+              options: [
+                {
+                  text: 'a simple branded experience',
+                  href: 'https://photobooth.co/themes',
+                  targetBlank: true
+                },
+                {
+                  text: 'ideas for a party',
+                  href: 'https://photobooth.co/pro-booth',
+                  targetBlank: true
+                },
+                {
+                  text: 'a virtual experience',
+                  href: 'https://brandmatic.co',
+                  targetBlank: true
+                },
+                {
+                  text: 'a long term install',
+                  href: 'https://simpleasmilk.com',
+                  targetBlank: true
+                },
+                {
+                  text: 'trade show solutions',
+                  href: 'https://simpleasmilk.com',
+                  targetBlank: true
+                }
+              ]
+            }
+          },
+          {
+            text: 'an agency',
+            result: {
+              question: 'and want:',
+              options: [
+                {
+                  text: 'activation ideas',
+                  href: 'https://simpleasmilk.com',
+                  targetBlank: true
+                },
+                {
+                  text: 'a simple branded experience',
+                  href: 'https://simpleasmilk.com',
+                  targetBlank: true
+                },
+                {
+                  text: 'something totally custom',
+                  href: 'https://simpleasmilk.com',
+                  targetBlank: true
+                },
+                {
+                  text: 'to discuss options with you',
+                  href: 'https://simpleasmilk.com',
+                  targetBlank: true
+                }
+              ]
+            }
+          },
+          {
+            text: 'planning a wedding',
+            result: {
+              question: 'and want:',
+              options: [
+                {
+                  text: 'a photo booth that prints',
+                  href: 'https://simpleasmilk.com',
+                  targetBlank: true
+                },
+                {
+                  text: 'a DIY photo booth',
+                  href: 'https://simpleasmilk.com',
+                  targetBlank: true
+                },
+                {
+                  text: 'my guests to take their own photos',
+                  href: 'https://simpleasmilk.com',
+                  targetBlank: true
+                }
+              ]
+            }
+          },
+          {
+            text: 'having a party',
+            result: {
+              question: 'and want:',
+              options: [
+                {
+                  text: 'a photo booth that prints',
+                  href: 'https://simpleasmilk.com',
+                  targetBlank: true
+                },
+                {
+                  text: 'a DIY photo booth',
+                  href: 'https://simpleasmilk.com',
+                  targetBlank: true
+                },
+                {
+                  text: 'my guests to take their own photos',
+                  href: 'https://simpleasmilk.com',
+                  targetBlank: true
+                }
+              ]
+            }
+          },
+          {
+            text: 'totally lost',
+            result: {
+              question: 'and want:',
+              options: [
+                {
+                  text: 'someone to call me',
+                  href: 'https://photobooth.co/contact',
+                  targetBlank: true
+                },
+                {
+                  text: 'lots of alcohol',
+                  href: 'https://simpleasmilk.com',
+                  targetBlank: true
+                }
+              ]
+            }
+          }
+        ]
+      }
+
+      var button = document.getElementById('clicker')
+      var body = document.body
+      var root = document.createElement('div')
+      button.addEventListener('click', function() {        
+        if (window.__openPickerApp) {
+          body.appendChild(root)
+          window.__openPickerApp(root, function() { body.removeChild(root) })
+        }
+      })
+    </script>
   </body>
 </html>
