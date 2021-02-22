@@ -41,6 +41,14 @@
   font-size: 1em;
 }
 
+.__picker-app .__picker-app-right-side-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+}
+
 .__picker-app .__picker-app-right-side-option {
   display: block;
   box-sizing: border-box;
@@ -76,3 +84,46 @@
   background: white;
   color: black;
 }
+
+.__picker-app .__picker-app-back-button {
+  position: absolute;
+  font-size: 0.7em;
+  top: 1em;
+  left: 1.6em;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10em;
+  padding: 0.2em 0.32em;
+}
+
+.__picker-app .__picker-app-back-button:hover,
+.__picker-app .__picker-app-back-button:focus {
+  background: white;
+  color: black;
+}
+
+.__picker-app .__picker-app-right-side-logo {
+  height : 1em;
+}
+
+.__picker-app .__picker-app-right-side-paragraph {
+  font-size: 0.5em;
+}
+
+.__picker-app .__picker-app-right-side-result-button {
+  display: block;
+  box-sizing: border-box;
+  background: black;
+  color: white;
+  border: solid 1px white;
+  padding: 0.2em 1em;
+}
+
+.__picker-app .__picker-app-right-side-result-button:hover,
+.__picker-app .__picker-app-right-side-result-button:focus {
+  background: white;
+  color: black;
+}
+
+

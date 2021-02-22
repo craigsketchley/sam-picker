@@ -1,10 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App, { PickerConfig } from './App'
+import App, { PickerQuestion } from './App'
 
-// @ts-ignore
-const config: PickerConfig = window.__PICKER_CONFIG__ || {
+const LOREM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+
+const DEMO_RESULT = {
+  description: LOREM,
+  logoSrc: 'https://photobooth.co/wp-content/themes/photobooth/img/logo-white.png',
+  href: 'https://photobooth.co/themes',
+  targetBlank: true
+}
+
+const config: PickerQuestion = (window as any).__PICKER_CONFIG__ || {
   question: 'I am:',
   options: [
     {
@@ -14,28 +22,23 @@ const config: PickerConfig = window.__PICKER_CONFIG__ || {
         options: [
           {
             text: 'a simple branded experience',
-            href: 'https://photobooth.co/themes',
-            targetBlank: true
+            result: DEMO_RESULT
           },
           {
             text: 'ideas for a party',
-            href: 'https://photobooth.co/pro-booth',
-            targetBlank: true
+            result: DEMO_RESULT
           },
           {
             text: 'a virtual experience',
-            href: 'https://brandmatic.co',
-            targetBlank: true
+            result: DEMO_RESULT
           },
           {
             text: 'a long term install',
-            href: 'https://simpleasmilk.com',
-            targetBlank: true
+            result: DEMO_RESULT
           },
           {
             text: 'trade show solutions',
-            href: 'https://simpleasmilk.com',
-            targetBlank: true
+            result: DEMO_RESULT
           }
         ]
       }
@@ -47,23 +50,19 @@ const config: PickerConfig = window.__PICKER_CONFIG__ || {
         options: [
           {
             text: 'activation ideas',
-            href: 'https://simpleasmilk.com',
-            targetBlank: true
+            result: DEMO_RESULT
           },
           {
             text: 'a simple branded experience',
-            href: 'https://simpleasmilk.com',
-            targetBlank: true
+            result: DEMO_RESULT
           },
           {
             text: 'something totally custom',
-            href: 'https://simpleasmilk.com',
-            targetBlank: true
+            result: DEMO_RESULT
           },
           {
             text: 'to discuss options with you',
-            href: 'https://simpleasmilk.com',
-            targetBlank: true
+            result: DEMO_RESULT
           }
         ]
       }
@@ -75,18 +74,15 @@ const config: PickerConfig = window.__PICKER_CONFIG__ || {
         options: [
           {
             text: 'a photo booth that prints',
-            href: 'https://simpleasmilk.com',
-            targetBlank: true
+            result: DEMO_RESULT
           },
           {
             text: 'a DIY photo booth',
-            href: 'https://simpleasmilk.com',
-            targetBlank: true
+            result: DEMO_RESULT
           },
           {
             text: 'my guests to take their own photos',
-            href: 'https://simpleasmilk.com',
-            targetBlank: true
+            result: DEMO_RESULT
           }
         ]
       }
@@ -98,18 +94,15 @@ const config: PickerConfig = window.__PICKER_CONFIG__ || {
         options: [
           {
             text: 'a photo booth that prints',
-            href: 'https://simpleasmilk.com',
-            targetBlank: true
+            result: DEMO_RESULT
           },
           {
             text: 'a DIY photo booth',
-            href: 'https://simpleasmilk.com',
-            targetBlank: true
+            result: DEMO_RESULT
           },
           {
             text: 'my guests to take their own photos',
-            href: 'https://simpleasmilk.com',
-            targetBlank: true
+            result: DEMO_RESULT
           }
         ]
       }
@@ -121,13 +114,11 @@ const config: PickerConfig = window.__PICKER_CONFIG__ || {
         options: [
           {
             text: 'someone to call me',
-            href: 'https://photobooth.co/contact',
-            targetBlank: true
+            result: DEMO_RESULT
           },
           {
             text: 'lots of alcohol',
-            href: 'https://simpleasmilk.com',
-            targetBlank: true
+            result: DEMO_RESULT
           }
         ]
       }
